@@ -11,7 +11,13 @@ import axios from 'axios'
 
 Vue.config.productionTip = false
     // 设置axios地址根路径
-axios.defaults.baseURL = "http://timemeetyou.com:8889/api/private/v1/";
+axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/";
+// 通过axios拦截器预先增加token验证
+axios.interceptors.request.use(config => {
+    // console.log(config);
+    config.headers.Authorization = window.sessionStorage.getItem('token')
+    return config
+})
 
 // 将axios挂载到vue的原型对象上
 Vue.prototype.$http = axios
