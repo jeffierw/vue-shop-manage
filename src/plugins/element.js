@@ -24,6 +24,7 @@ import {
     Pagination,
     Dialog,
     MessageBox,
+    Tag,
 } from "element-ui";
 
 
@@ -51,3 +52,4 @@ Vue.use(Tooltip);
 Vue.use(Switch);
 Vue.use(Pagination);
 Vue.use(Dialog);
+Vue.use(Tag);
