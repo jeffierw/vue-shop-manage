@@ -8,15 +8,14 @@
 </el-breadcrumb>
 
 <!-- 权限表格 -->
-<el-table
+<el-card>
+  <el-table
   border
   stripe
       :data="rightsList"
       style="width: 100%">
       <el-table-column
-        type=index
-        label=""
-        width="180">
+        type=index>
       </el-table-column>
       <el-table-column
         prop="authName"
@@ -39,6 +38,8 @@
         </template>
       </el-table-column>
 </el-table>
+</el-card>
+
   </div>
 </template>
 
